@@ -79,7 +79,7 @@ kaggle link of .json files : https://www.kaggle.com/datasets/ragibmehedi/malabar
 
 The best weights were stored in .keras files. Link: https://www.kaggle.com/datasets/ragibmehedi/malabar-spinach-keras-files
 
-Pixel-wise annotated for:
+Pixel-wise annotation for:
 
 Bacterial Spots
 
@@ -87,4 +87,4 @@ Downy Mildew
 
 Anthracnose
 
-Annotations were prepared using LabelMe, and binary masks were generated from JSON files.
+LabelMe was used for annotation and binary masks were generated from JSON files.
