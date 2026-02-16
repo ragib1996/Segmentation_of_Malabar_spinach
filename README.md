@@ -73,7 +73,7 @@ The main dataset consists of leaf images of Malabar spinach
 
 Original link : https://www.sciencedirect.com/science/article/pii/S2352340925000253 
 
-kaggle link of my dataset : https://www.kaggle.com/datasets/ragibmehedi/malabar-dataset
+kaggle link of leaf image dataset : https://www.kaggle.com/datasets/ragibmehedi/malabar-dataset
 
 kaggle link of .json files : https://www.kaggle.com/datasets/ragibmehedi/malabar-dataset-annotated-json-files
 
