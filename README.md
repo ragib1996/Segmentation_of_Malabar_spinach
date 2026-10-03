@@ -1,90 +1,146 @@
-🌿 Malabar Spinach Leaf Disease Segmentation
+# 🌿 Malabar Spinach Leaf Disease Segmentation
 
-This repository presents a comparative deep learning study for semantic segmentation of Malabar Spinach leaf diseases. The goal is to accurately segment diseased regions from leaf images to assist in automated agricultural disease analysis.
+This repository contains a comparative deep learning study for **semantic segmentation of diseased regions in Malabar spinach (*Basella alba*) leaves**.
 
-The project evaluates five state-of-the-art segmentation architectures:
+The objective is to accurately segment disease-affected regions from leaf images and compare the performance of different semantic segmentation architectures for automated agricultural disease analysis.
 
-UNet
+## 🧠 Segmentation Models
 
-UNet++
+Five deep learning architectures are evaluated:
 
-Attention UNet
+* **U-Net**
+* **U-Net++**
+* **Attention U-Net**
+* **SegNet**
+* **DeepLabV3**
 
-SegNet
+## 🦠 Diseases
 
-DeepLabV3
+The study considers three Malabar spinach leaf diseases:
 
-The diseases considered in this study are:
+* **Bacterial Spots**
+* **Downy Mildew**
+* **Anthracnose**
 
-Bacterial Spots
+## 📌 Project Objectives
 
-Downy Mildew
+This project aims to:
 
-Anthracnose
+* Segment disease-affected regions from Malabar spinach leaf images
+* Compare the performance of multiple segmentation architectures
+* Evaluate model performance for individual diseases
+* Perform overall evaluation across the complete test set
+* Provide reproducible training and testing notebooks
+* Release trained model weights for further research and experimentation
 
-📌 Project Objective
+## 📂 Repository Structure
 
-Manual disease detection in crops is labor-intensive and error-prone. This project aims to:
-
-Segment infected regions from leaf images
-
-Compare performance of multiple segmentation models
-
-Analyze disease-wise performance
-
-Provide reproducible experimental pipelines
-
-📂 Repository Structure
-Segmentation_of_Malabar_spinach
+```text
+Segmentation_of_Malabar_spinach/
 │
 ├── UNet/
 │   ├── unet_segmentation_training.ipynb
 │   ├── unet-testing_bacterial_spots.ipynb
 │   ├── unet-testing_anthracnose.ipynb
 │   ├── unet-testing_downy_mildew.ipynb
-│   ├── unet-testing_overall.ipynb
+│   └── unet-testing_overall.ipynb
 │
 ├── UNet++/
 │   ├── u_net++_segmentation_training.ipynb
 │   ├── u-net++-testing_bacterial_spots.ipynb
 │   ├── u-net++-testing_anthracnose.ipynb
 │   ├── u-net++-testing_downy_mildew.ipynb
-│   ├── u-net-testing_overall.ipynb
+│   └── u-net++-testing_overall.ipynb
 │
 ├── Attention_UNet/
+│   ├── ...
+│
 ├── SegNet/
+│   ├── ...
+│
 ├── DeepLabV3/
+│   ├── ...
 │
 └── README.md
+```
+
+Each model directory contains:
+
+* ✅ **1 training notebook**
+* ✅ **3 disease-specific testing notebooks**
+* ✅ **1 overall testing notebook**
+
+## 🗂 Dataset
+
+The dataset consists of Malabar spinach leaf images containing three disease categories:
+
+* Bacterial Spots
+* Downy Mildew
+* Anthracnose
+
+### Original Dataset
+
+The dataset was originally published as part of a scientific data resource:
+
+[ScienceDirect – Malabar spinach dataset](https://www.sciencedirect.com/science/article/pii/S2352340925000253)
+
+### Kaggle Resources
+
+**Leaf Image Dataset:**
+[Malabar Dataset – Kaggle](https://www.kaggle.com/datasets/ragibmehedi/malabar-dataset)
+
+**LabelMe JSON Annotations:**
+[Malabar Dataset – Annotated JSON Files](https://www.kaggle.com/datasets/ragibmehedi/malabar-dataset-annotated-json-files)
+
+**Trained Model Weights:**
+[Malabar Spinach Keras Files – Kaggle](https://www.kaggle.com/datasets/ragibmehedi/malabar-spinach-keras-files)
+
+## 🏷️ Annotation
+
+Pixel-wise annotations were created for the disease-affected regions of the leaves.
+
+The following disease categories were annotated:
+
+* Bacterial Spots
+* Downy Mildew
+* Anthracnose
+
+**LabelMe** was used to create polygon-based annotations. The corresponding binary segmentation masks were generated from the LabelMe JSON annotation files.
+
+## 💾 Model Weights
+
+The best-performing model weights obtained during training are provided as `.keras` files.
+
+These weights can be used to reproduce the testing experiments or perform inference on new images.
+
+## 📊 Evaluation
+
+The models are evaluated using pixel-level semantic segmentation metrics, including:
+
+* **Intersection over Union (IoU)**
+* **Dice coefficient**
+
+Evaluation is performed both:
+
+1. **Disease-wise**, for Bacterial Spots, Downy Mildew, and Anthracnose
+2. **Overall**, across the complete test dataset
+
+## 🔬 Reproducibility
+
+The repository provides the training and testing notebooks used in the experiments.
+
+The notebooks include the necessary steps for:
+
+* Dataset preparation
+* Loading and preprocessing images
+* Loading segmentation masks
+* Model training
+* Model evaluation
+* Disease-specific testing
+* Overall testing
+* Saving and loading trained model weights
 
 
-Each model folder contains:
-
-✅ 1 Training Notebook
-
-✅ 3 Disease-Specific Testing Notebooks
-
-✅ 1 Overall Testing Notebook
+---
 
 
-🗂 Dataset Description
-
-The main dataset consists of leaf images of Malabar spinach
-
-Original link : https://www.sciencedirect.com/science/article/pii/S2352340925000253 
-
-kaggle link of leaf image dataset : https://www.kaggle.com/datasets/ragibmehedi/malabar-dataset
-
-kaggle link of .json files : https://www.kaggle.com/datasets/ragibmehedi/malabar-dataset-annotated-json-files
-
-The best weights were stored in .keras files. Link: https://www.kaggle.com/datasets/ragibmehedi/malabar-spinach-keras-files
-
-Pixel-wise annotation for:
-
-Bacterial Spots
-
-Downy Mildew
-
-Anthracnose
-
-LabelMe was used for annotation and binary masks were generated from JSON files.
