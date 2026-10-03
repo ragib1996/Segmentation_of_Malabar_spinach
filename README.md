@@ -80,7 +80,7 @@ The dataset consists of Malabar spinach leaf images containing three disease cat
 
 ### Original Dataset
 
-The dataset was originally published as part of a scientific data resource:
+The leaf image dataset was obtained from the dataset published with the following scientific data article:
 
 [ScienceDirect – Malabar spinach dataset](https://www.sciencedirect.com/science/article/pii/S2352340925000253)
 
