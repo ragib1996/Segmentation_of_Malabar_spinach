@@ -131,7 +131,6 @@ The repository provides the training and testing notebooks used in the experimen
 
 The notebooks include the necessary steps for:
 
-* Dataset preparation
 * Loading and preprocessing images
 * Loading segmentation masks
 * Model training
